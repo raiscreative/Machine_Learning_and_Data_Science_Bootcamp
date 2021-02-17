@@ -1,0 +1,14 @@
+from string import punctuation
+
+test_message = "WIN MONEY!!!! We Need YOUR Expert Opinion! EASY money. Click >HERE<"
+expected_answer = "win money we need your expert opinion easy money click here"
+
+
+def clean_message(message):
+    new_message = ''
+    for char in message:
+        if char not in punctuation:
+            new_message += char
+    return new_message.lower()
+
+print(clean_message(test_message) == expected_answer)
