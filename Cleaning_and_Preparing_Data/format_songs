@@ -1,0 +1,13 @@
+test_songs = ['1 - Thoughts Of Time', '2 - Passion Of The Night', '3 - Amused By Her Strength', '4 - Get My Friends', '5 - Broken Life', '6 - Super Song', '7 - Darling, Remember The Times', "8 - Baby, You are Strange And I Like It", '9 - She Said I Will Try', '10 - In Love With You', '12 - Hat Of The South', '13 - Friends Of My Dreams', '14 - Dream His Luck']
+expected_answer = ['01 - Thoughts Of Time', '02 - Passion Of The Night', '03 - Amused By Her Strength', '04 - Get My Friends', '05 - Broken Life', '06 - Super Song', '07 - Darling, Remember The Times', "08 - Baby, You are Strange And I Like It", '09 - She Said I Will Try', '10 - In Love With You', '12 - Hat Of The South', '13 - Friends Of My Dreams', '14 - Dream His Luck']
+
+def format_songs(songs):
+    number_digits = len(str(len(songs)))
+    formatted_songs = []
+    for song in songs:
+        num = song.split()[0]
+        formatted_song = '0' * (number_digits - len(num)) + song
+        formatted_songs.append(formatted_song)
+    return formatted_songs
+
+print(format_songs(test_songs) == expected_answer)
