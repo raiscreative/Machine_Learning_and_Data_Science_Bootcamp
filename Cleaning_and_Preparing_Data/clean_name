@@ -1,0 +1,7 @@
+test_name = "AsIL sEnDo"
+expected_answer = "Asil Sendo"
+
+def clean_name(name):
+    return name.title()
+answer = clean_name(test_name)
+print(answer == expected_answer)
